@@ -42,6 +42,10 @@
     @apply bg-white/80 backdrop-blur-lg border border-white/20;
   }
   
+  .dark .glass {
+    @apply bg-gray-900/80 border-gray-700/20;
+  }
+  
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out forwards;
   }
@@ -52,6 +56,22 @@
   
   .animate-scale {
     animation: scale 0.2s ease-out forwards;
+  }
+
+  .severity-critical {
+    @apply border-l-4 border-red-500 bg-red-50;
+  }
+
+  .severity-high {
+    @apply border-l-4 border-orange-500 bg-orange-50;
+  }
+
+  .severity-medium {
+    @apply border-l-4 border-yellow-500 bg-yellow-50;
+  }
+
+  .severity-low {
+    @apply border-l-4 border-blue-500 bg-blue-50;
   }
 }
 
