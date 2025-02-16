@@ -5,25 +5,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 242 83% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --background: 158 40% 8%;
+    --foreground: 158 10% 98%;
+    --card: 158 40% 10%;
+    --card-foreground: 158 10% 98%;
+    --popover: 158 40% 8%;
+    --popover-foreground: 158 10% 98%;
+    --primary: 158 80% 20%;
+    --primary-foreground: 158 10% 98%;
+    --secondary: 158 40% 15%;
+    --secondary-foreground: 158 10% 98%;
+    --muted: 158 40% 15%;
+    --muted-foreground: 158 10% 60%;
+    --accent: 158 40% 15%;
+    --accent-foreground: 158 10% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 158 40% 15%;
+    --input: 158 40% 15%;
+    --ring: 158 40% 50%;
     --radius: 0.75rem;
   }
 }
@@ -39,11 +39,7 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/80 backdrop-blur-lg border border-white/20;
-  }
-  
-  .dark .glass {
-    @apply bg-gray-900/80 border-gray-700/20;
+    @apply bg-primary/10 backdrop-blur-lg border border-primary/20 shadow-lg shadow-primary/10;
   }
   
   .animate-fade-in {
@@ -59,29 +55,29 @@
   }
 
   .severity-critical {
-    @apply border-l-4 border-red-500 bg-red-50;
+    @apply border-l-4 border-red-500 bg-red-950/30;
   }
 
   .severity-high {
-    @apply border-l-4 border-orange-500 bg-orange-50;
+    @apply border-l-4 border-orange-500 bg-orange-950/30;
   }
 
   .severity-medium {
-    @apply border-l-4 border-yellow-500 bg-yellow-50;
+    @apply border-l-4 border-yellow-500 bg-yellow-950/30;
   }
 
   .severity-low {
-    @apply border-l-4 border-blue-500 bg-blue-50;
+    @apply border-l-4 border-blue-500 bg-blue-950/30;
+  }
+
+  .info {
+    @apply border-l-4 border-green-500 bg-green-950/30;
   }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
@@ -96,10 +92,6 @@
 }
 
 @keyframes scale {
-  from {
-    transform: scale(0.95);
-  }
-  to {
-    transform: scale(1);
-  }
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
 }
